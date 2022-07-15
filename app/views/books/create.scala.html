@@ -1,0 +1,64 @@
+@import model.Book
+
+@(bookForm : Form[Book])
+
+<html>
+
+    <head>
+        <title>Create a Book</title>
+    </head>
+
+    <body>
+        <h1>Create a book..</h1>
+
+        <form action="/books/create" method="POST">
+            <table>
+                <tr>
+                    <td>
+                        id :
+                    </td>
+                    <td>
+                        <input type="number" placeholder="bookId" name="">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        title :
+                    </td>
+                    <td>
+                        <input type="text" placeholder="title" name="">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        price :
+                    </td>
+                    <td>
+                        <input type="number" placeholder="price" name="">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        author :
+                    </td>
+                    <td>
+                        <input type="text" placeholder="author" name="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="Create Book" name="">
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+
+
+
+
+    </body>
+</html>

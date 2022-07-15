@@ -1,0 +1,77 @@
+@import model.Book
+
+@(bookForm : Form[Book])
+
+
+<html>
+
+    <head>
+        <title>Edit Book</title>
+    </head>
+
+    <body>
+        <h1>Edit a book..</h1>
+
+@*        @helper.form(action = routes.BooksController.update){*@
+@*            @helper.inputText(bookForm("id"))*@
+
+@*            @helper.inputText(bookForm("title"))*@
+@*            @helper.inputText(bookForm("price"))*@
+@*            @helper.inputText(bookForm("author"))*@
+
+@*            <input type="submit" value="Edit Book">*@
+@*        }*@
+
+        <form action="/books/edit" method="PUT">
+            <table>
+                <tr>
+                    <td>
+                        id :
+                    </td>
+                    <td>
+                        <input type="number"  placeholder="bookId" name="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        title :
+                    </td>
+                    <td>
+                        <input type="text" placeholder="title" name="">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        price :
+                    </td>
+                    <td>
+                        <input type="number" placeholder="price" name="">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        author :
+                    </td>
+                    <td>
+                        <input type="text" placeholder="author" name="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="Edit Book" name="">
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+
+
+    </body>
+
+
+</html>
+
+
+

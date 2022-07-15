@@ -1,0 +1,26 @@
+@import model.Book
+
+@import java.util
+@(books : util.ArrayList[Book])
+
+<html>
+    <head>
+        <title>List of books!!</title>
+    </head>
+
+    <body>
+
+        <h1>All books...</h1>
+
+@*for loop to get each books from Set[Book]*@
+        @for(book <- books){
+            <a href="@routes.BooksController.show(book.id)"> @book.title</a>
+            <p>Price : @book.price</p>
+            <p>Author : @book.author</p>
+        }
+
+        <a href="@routes.BooksController.create()">Create Book</a>
+
+    </body>
+
+</html>
